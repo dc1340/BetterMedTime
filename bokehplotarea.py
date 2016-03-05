@@ -23,6 +23,7 @@ data = dict(
 #            tools=tools, x_range=[0, 24])  # x_range=[0, 4*np.pi], y_range=[-2.5, 2.5]
 # p.grid.grid_line_alpha = 0
 
+
 # widgets
 text1 = TextInput(title="drug 1")
 text2 = TextInput(title="dose of drug 1")
@@ -41,8 +42,6 @@ text4 = TextInput(title="dose of drug 2")
 # for t in [text1, text2, text3, text4]:
 #     w.on_change('value', update_data)
 
-# area plot
-area = Area(data, legend='top_left', title="Plasma Concentration over Time", xlabel="Time", ylabel="Concentration")
-
 inputs = VBoxForm(children=[text1, text2, text3, text4])
-curdoc().add_root(HBox(children=[inputs, area]))
+# area =
+curdoc().add_root(HBox(children=[inputs, Area(data, legend='top_left', title="Plasma Concentration over Time", xlabel="Time", ylabel="Concentration")])) #, area
